@@ -1,0 +1,8 @@
+{
+  "appId": "com.pocketprospector.game",
+  "appName": "地底打工龙",
+  "webDir": "dist",
+  "android": {
+    "backgroundColor": "#151b20"
+  }
+}

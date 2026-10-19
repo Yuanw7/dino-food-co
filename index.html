@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#151d1b" />
+  <meta name="description" content="陨石之后，恐龙在地下为食物公司打工。操控管状抓手，绕过岩层，三天交齐口粮。" />
+  <title>地底打工龙 · Dino Food Co.</title>
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead"><a href="./" class="brand"><span class="dino-portrait" aria-hidden="true"></span><span>DINO FOOD CO.<small>恐龙食物公司 / 地下事业部</small></span></a><div class="header-right"><span class="connection"><i></i> 地下生存系统在线</span><button id="privacy" class="text-button">档案与鸣谢</button></div></header>
+    <section class="intro"><div><p class="eyebrow">POST-IMPACT / UNDERGROUND SURVIVAL</p><h1>地底打工龙<span>今天也要，活着下班。</span></h1></div><div class="employee-stamp">EMPLOYEE NO. 042<br><b>正式临时工</b></div></section>
+    <div class="workspace">
+      <section class="game-column">
+        <div class="dashboard"><div class="day-stat"><span>当前班次</span><strong>DAY <b id="day">01</b></strong><small id="cycle">合同 01 · 第 1 / 3 天</small></div><div><span>本日采集</span><strong id="daily">0 <small>币</small></strong><small>送回仓库才计数</small></div><div><span>距离下班</span><strong id="time">60 <small>秒</small></strong><div class="time-track"><i id="time-fill"></i></div></div><button id="pause" class="square-button" aria-label="暂停游戏" disabled>Ⅱ</button></div>
+        <section class="game" aria-label="地下食物采集区">
+          <div class="viewport"><canvas id="mine" width="960" height="660" tabindex="0" aria-label="地下采集区。WASD 或方向键移动抓手，空格收管，Esc 暂停。"></canvas><div class="zone-tag">B–07 <span>潮湿裂隙</span></div><div id="overlay" class="overlay"><div class="overlay-card"><p class="eyebrow">DINO FOOD CO.</p><h2>采集站启动中…</h2><p id="loading">正在搬运恐龙与食物素材。</p></div></div><div id="toast" class="toast" role="status" aria-live="polite"></div></div>
+          <footer class="controls"><div class="machine-status"><i></i><span id="status">等待员工签到</span></div><div class="control-actions"><button id="recall" class="secondary" disabled>收回管线 <kbd>SPACE</kbd></button><button id="end-day" class="text-button" disabled>提前下班 ↗</button></div></footer>
+        </section>
+        <div class="under-game"><div class="key-guide"><span class="keycap">W</span><span class="keycap">A</span><span class="keycap">S</span><span class="keycap">D</span><span>逐格伸管 · 绕开岩石 · 接触采集</span></div><span id="pipe-length">管线 0 / 63</span></div>
+        <div class="touch-controls" aria-label="触屏方向控制"><div class="dpad"><button data-dir="up" aria-label="向上伸管">↑</button><button data-dir="left" aria-label="向左伸管">←</button><button data-dir="down" aria-label="向下伸管">↓</button><button data-dir="right" aria-label="向右伸管">→</button></div><p>按住方向连续伸管<br>反方向退回一格</p></div>
+      </section>
+      <aside class="sidebar">
+        <section class="quota-panel panel"><div class="section-label"><span>本期生存合同</span><span id="contract-number">#001</span></div><h2><span id="bank">0</span><small> / <span id="target">900</span></small></h2><p class="muted">食物币 · 第三天下班时上交</p><div class="quota-track"><i id="quota-fill"></i></div><div id="day-dots" class="day-dots"><span>第 1 天</span><span>第 2 天</span><span>交粮日</span></div><div class="contract-note"><span>!</span><p id="contract-tip">按时交粮，续住地下。<br>额度不足，遣返地表。</p></div></section>
+        <section class="catalog panel"><div class="section-label"><span>今日食物收购价</span><span>↗</span></div><div id="food-list"></div><p class="catalog-note">大型植物价值高，回收也更慢。</p></section>
+        <section class="dispatch"><p class="eyebrow">来自地表的最后一封信</p><p>陨石落下后，阳光成了奢侈品。我们躲进岩层，靠藻类活着。</p><p>公司说，只要完成额度，明天就还有你的床位。</p><span>— 地下纪元，第 1 年</span></section>
+      </aside>
+    </div>
+    <footer class="page-footer"><span>“食物属于公司，明天属于你。”</span><span id="best">最高累计采集 0 币</span><span>离线单机 · 原型 0.2.0</span></footer>
+    <dialog id="privacy-dialog"><p class="eyebrow">EMPLOYEE ARCHIVE</p><h2>档案与素材鸣谢</h2><p>当前版本没有账号、广告、支付或分析 SDK。最高累计采集纪录仅保存在本设备；关闭游戏后当前挑战重新开始。</p><p>恐龙角色：用户提供的 Dino Characters v1.1。UI：Crusenho Agus Hennihuno，Complete UI Essential Pack（CC BY 4.0），经缩放和调色使用。</p><p><a href="https://crusenho.itch.io" target="_blank" rel="noreferrer">UI 作者</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">许可说明</a>。地下食物：本项目 AI 生成原创图。参考截图仅用于美术参考。</p><p>本说明对应开发试玩版，正式发行资料见项目发布清单。</p><div class="dialog-actions"><button id="clear-save" class="secondary">清除本地纪录</button><button id="close-privacy" class="primary">返回采集站</button></div></dialog>
+  </main>
+  <script type="module" src="/index.js"></script>
+</body>
+</html>
